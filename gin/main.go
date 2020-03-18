@@ -2,7 +2,7 @@ package main
 
 import "github.com/gin-gonic/gin"
 
-func main() {
+func ginTest() {
 	res := gin.Default() //使用了gin.Default()生成了一个实例，这个实例即 WSGI 应用程序。
 	res.GET("/", func(c *gin.Context) {
 		c.String(200, "Hello,Gin!!!")

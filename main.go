@@ -6,8 +6,8 @@ import (
 	"rsc.io/quote"
 )
 
-func main() {
-	fmt.Println(quote.Hello())  // Ahoy, world!
+func mainTest() {
+	fmt.Println(quote.Hello()) // Ahoy, world!
 	fmt.Println(calc.Add(10, 3))
 
 }

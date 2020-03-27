@@ -29,5 +29,15 @@ ok      github.com/aystzh/go-modules/test       0.291s
 --- PASS: TestAdd (0.00s)
 PASS
 ok      github.com/aystzh/go-modules/test       0.486s
+```
+##### 子测试
+```shell script
+192:test zhanghuan$ go test -run TestMul/neg -v
+=== RUN   TestMul
+=== RUN   TestMul/neg
+--- PASS: TestMul (0.00s)
+    --- PASS: TestMul/neg (0.00s)
+PASS
+ok      github.com/aystzh/go-modules/test       0.468s
 
 ```

@@ -39,5 +39,28 @@ ok      github.com/aystzh/go-modules/test       0.486s
     --- PASS: TestMul/neg (0.00s)
 PASS
 ok      github.com/aystzh/go-modules/test       0.468s
-
+```
+##### 基准测试
+###### 函数名必须以 Benchmark 开头，后面一般跟待测试的函数名
+###### 参数为 b *testing.B
+###### 执行基准测试时，需要添加 -bench 参数。
+```shell script
+192:benchmark zhanghuan$ go test -benchmem -bench .
+goos: darwin
+goarch: amd64
+pkg: github.com/aystzh/go-modules/test/benchmark
+BenchmarkHello-12               25150080                48.2 ns/op             5 B/op          1 allocs/op
+BenchmarkParallel-12             5237719               245 ns/op             272 B/op          8 allocs/op
+PASS
+ok      github.com/aystzh/go-modules/test/benchmark     4.382s
+```
+###### 基准测试各个函数意义：
+```shell script
+type BenchmarkResult struct {
+    N         int           // 迭代次数
+    T         time.Duration // 基准测试花费的时间
+    Bytes     int64         // 一次迭代处理的字节数
+    MemAllocs uint64        // 总的分配内存的次数
+    MemBytes  uint64        // 总的分配内存的字节数
+}
 ```

@@ -64,3 +64,12 @@ type BenchmarkResult struct {
     MemBytes  uint64        // 总的分配内存的字节数
 }
 ```
+##### mockgen辅助生成测试代码 
+###### 使用 mockgen 生成 db_mock.go。一般传递三个参数。包含需要被mock的接口得到源文件source，生成的目标文件destination，包名package
+```shell script
+install:
+go get -u github.com/golang/mock/gomock
+go get -u github.com/golang/mock/mockgen
+generate:
+192:gomock zhanghuan$ mockgen -source=db.go -destination=db_mock.go -package=main
+```

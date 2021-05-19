@@ -1,3 +1,5 @@
+github.com/aystzh/go-framework v0.0.0-20200331030233-621608e186aa h1:4S+zYU1lnB4FEt8uJS+fMbBLFmMrawqLS/ILygtKfiA=
+github.com/aystzh/go-framework v0.0.0-20200331030233-621608e186aa/go.mod h1:9rpbJ/zSSL8S1jJKIuLvNv6siAvCTAatAsdHw+S7XUk=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

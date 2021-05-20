@@ -10,7 +10,7 @@ import (
 func BenchmarkHello(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		fmt.Sprintf("hello")
+		fmt.Println("hello")
 	}
 }
 
@@ -22,7 +22,10 @@ func BenchmarkParallel(b *testing.B) {
 		for pb.Next() {
 			// 所有 goroutine 一起，循环一共执行 b.N 次
 			buf.Reset()
-			templ.Execute(&buf, "Word")
+			err := templ.Execute(&buf, "Word")
+			if err != nil {
+				fmt.Printf("err")
+			}
 		}
 	})
 }

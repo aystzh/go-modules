@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	http.
 	rpc.Register(new(Cal))
 	rpc.HandleHTTP()
 	log.Printf("Serving RPC server on port %d", 1234)

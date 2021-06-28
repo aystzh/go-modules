@@ -14,7 +14,7 @@ func uploadFileTest() {
 func uploadFile() {
 	r := gin.Default()
 	r.POST("/uploadSingle", func(context *gin.Context) {
-		file, _ := context.FormFile("file")
+		file, _ := context.mFormFile("file")
 		context.String(http.StatusOK, "%s uploaded!", file.Filename)
 	})
 	r.Run()
